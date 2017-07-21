@@ -142,6 +142,9 @@ saver = tf.train.Saver(max_to_keep = 5)
 sess = tf.Session()
 sess.run([init_op])
 
+# Init local variables
+sess.run(tf.local_variables_initializer())
+
 # if model exist, restore
 """
 #if model exist :
